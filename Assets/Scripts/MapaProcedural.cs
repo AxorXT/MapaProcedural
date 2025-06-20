@@ -17,7 +17,7 @@ public class MapaProcedural : MonoBehaviour
     public Transform player;
 
     // Cada bloque con sus objetos hijos
-    private Dictionary<Vector2Int, BlockData> spawnedBlocks = new Dictionary<Vector2Int, BlockData>();
+    [SerializeField]private Dictionary<Vector2Int, BlockData> spawnedBlocks = new Dictionary<Vector2Int, BlockData>();
 
     void Start()
     {
@@ -82,7 +82,7 @@ public class MapaProcedural : MonoBehaviour
             float localZ = Random.Range(1f, blockSize - 1f);
 
             
-            float alturaY = 0.5f; // Ajusta según tu objeto
+            float alturaY = 0.5f;
             Vector3 objLocalPos = new Vector3(localX, alturaY, localZ);
             obj.transform.localPosition = objLocalPos;
 
